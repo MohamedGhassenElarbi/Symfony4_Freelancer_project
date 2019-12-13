@@ -1,0 +1,39 @@
+{% extends 'base3.html.twig'%}
+{% block body %}
+<div>
+<table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Type</th>
+            <th scope="col">Description</th>
+            <th scope="col">Technologie</th>
+            <th scope="col">Côut</th>
+
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+
+                  {% for reserv in ti %}
+                 
+            <tr> 
+                <th>{{reserv.id}}</th>
+                
+                <th>{{reserv.idTache.type}}</th>
+                <th>{{reserv.idTache.description}}</th>
+                <th>{{reserv.idTache.technologie}}</th>
+                <th>{{reserv.idTache.cout}}</th>
+                <th>
+                    <a href="{{path('details',{'id':reserv.idTache.id})}}">
+                        <button type="button" class="btn btn-primary">plus de détails</button>
+                    </a>
+                </th>
+            </tr>
+        {% endfor %}
+          
+        </tbody>
+    </table>
+    </div>
+
+{% endblock %}

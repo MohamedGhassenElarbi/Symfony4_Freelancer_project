@@ -1,0 +1,42 @@
+{% extends 'base2.html.twig'%}
+{% block body %}
+    <!-- section -->
+	<p>&nbsp;</p>
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!--  Product Details -->
+				<div class="product product-details clearfix">
+					<div class="col-md-6">
+						<div id="product-main-view">
+							<div class="product-view">
+								<img src="" alt="">
+							</div>
+							
+						</div>
+					
+					</div>
+					<div class="col-md-6">
+						<div class="product-body">
+							<h2 class="product-name">Freelancer ID:{{freelancers.id}}</h2>
+							<h3 class="product-price">Nom:{{freelancers.nom}}</h3>
+							<p><strong>Prenom:</strong> {{freelancers.prenom}}</p>
+                            <p><strong> Domaine:</strong> {{freelancers.domaine}}</p>
+							<p><strong>Email:</strong>{{freelancers.email}}</p>
+							
+
+						</div>
+					</div>
+					
+
+				</div>
+				<!-- /Product Details -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+{% endblock %}

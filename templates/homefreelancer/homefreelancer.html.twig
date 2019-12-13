@@ -1,0 +1,59 @@
+{% extends 'base3.html.twig'%}
+{% block body %}
+	<!-- /HOME -->
+	<!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- section title -->
+				<div class="col-md-12">
+					<div class="section-title">
+						<h2 class="title">Les Tâches Disponible:</h2>
+					</div>
+				</div>
+				<!-- section title -->
+
+			</div>
+			<!-- /row -->
+
+			<!-- row -->
+			<div class="row">
+				<!-- Product Single -->
+				{% for tache in taches %}
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="product product-single">
+						<div class="product-thumb">
+							<div class="product-label">
+							</div>
+							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i><a href="product-page.php?id=<?php echo $phone->getId()?>"> Quick view</a></button>
+							<img src="{{tache.image}}" alt="">
+						</div>
+						<div class="product-body">
+							<h3 class="product-price">{{tache.cout}}$</h3>	
+							<h2 class="product-name"><a href="#">{{tache.id}}</a></h2>
+							<h3 class="product-name"><a href="#">{{tache.type}}</a></h3>
+                            <h3 class="product-name"><a href="#">{{tache.technologie}}</a></h3>
+                            <h3 class="product-name"><a href="#">{{tache.description}}</a></h3>
+							<div class="product-btns">
+								<!--<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>-->
+								<form action="{{path('reserver',{'id':tache.id})}}" method="POST">
+								<input type="hidden" name="id"value="">
+								<i class="fa fa-shopping-cart"></i> <input type="submit" class="primary-btn add-to-cart" value="Réserver Tâche">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Product Single -->
+				{% endfor %}
+			</div>
+			
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+{% endblock %}

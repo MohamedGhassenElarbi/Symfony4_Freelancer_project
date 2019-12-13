@@ -1,0 +1,55 @@
+{% extends 'base2.html.twig'%}
+{% block body %}
+    <!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+			<div class="header-search">
+						<form method="Post" action="aff_modif.php">
+							<input class="input search-input" type="text" placeholder="Saisir l'ID d'une tâche " name="recherche">
+							<button class="search-btn"><i class="fa fa-search"></i></button>
+						</form>
+					</div>
+				<form id="checkout-form" class="clearfix" method="Post" action="{{ path('modiffreelancer') }}">
+					<div class="col-md-6">
+						<div class="billing-details">
+							<div class="section-title">
+								<h3 class="title">Modifier un Freelancer</h3>
+                            </div>
+                            <div class="form-group">
+								<input class="input" type="text" name="id" value={{freelancer.id}}>
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="nom" placeholder="Nom" value="{{freelancer.nom}}" >
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="prenom" placeholder="Prenom"value="{{freelancer.prenom}}">
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="domaine" placeholder="Domaine"value={{freelancer.domaine}}>
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="email" placeholder="Email"value={{freelancer.email}}>
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="username" placeholder="username"value={{freelancer.username}}>
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="mdp" placeholder="Mot de Passe"value={{freelancer.mdp}}>
+							</div>
+							<div class="form-group">
+							<button class="primary-btn">Modifier le Freelancer</button>
+							</div>
+						</div>
+					</div>
+					</div>
+				</form>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+{% endblock %}

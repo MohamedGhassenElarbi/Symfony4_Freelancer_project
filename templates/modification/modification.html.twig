@@ -1,0 +1,52 @@
+{% extends 'base2.html.twig'%}
+{% block body %}
+    <!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+			<div class="header-search">
+						<form method="Post" action="aff_modif.php">
+							<input class="input search-input" type="text" placeholder="Saisir l'ID d'une tâche " name="recherche">
+							<button class="search-btn"><i class="fa fa-search"></i></button>
+						</form>
+					</div>
+				<form id="checkout-form" class="clearfix" method="Post" action="{{ path('modif') }}">
+					<div class="col-md-6">
+						<div class="billing-details">
+							<div class="section-title">
+								<h3 class="title">Modifier une Tâche</h3>
+                            </div>
+                            <div class="form-group">
+								<input class="input" type="text" name="id" value={{identifiant.id}}>
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="type" placeholder="Type" value="{{identifiant.type}}" >
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="description" placeholder="description"value="{{identifiant.description}}">
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="image" placeholder="image"value={{identifiant.image}}>
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="technologie" placeholder="technologie"value={{identifiant.technologie}}>
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="cout" placeholder="côut"value={{identifiant.cout}}>
+							</div>
+							<div class="form-group">
+							<button class="primary-btn">Modifier la Tâche</button>
+							</div>
+						</div>
+					</div>
+					</div>
+				</form>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+{% endblock %}

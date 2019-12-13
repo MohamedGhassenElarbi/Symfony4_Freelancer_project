@@ -1,0 +1,33 @@
+{% extends 'base.html.twig'%}
+{% block body %}
+<div class="col-md-6 login-form-2">
+<form method="Post" action="{{path('register')}}">
+                    
+                    <h3>Inscription</h3>
+                        <div class="form-group">
+                            <input type="text" name="nom"class="form-control" placeholder="Nom *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text"  name="prenom"class="form-control" placeholder="Prenom *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text"  name="username"class="form-control" placeholder="username *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="domaine" class="form-control" placeholder="Domaine *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="email"class="form-control" placeholder="Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="image"class="form-control" placeholder="Image *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password"name="mdp" class="form-control" placeholder="Mot de passe *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Crée un compte" />
+                        </div>
+                    </form>
+                </div>
+{% endblock %}

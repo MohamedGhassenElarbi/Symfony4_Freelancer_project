@@ -1,0 +1,45 @@
+{% extends 'base2.html.twig'%}
+{% block body %}
+<div>
+<a href="{{path('aff_ajout')}}">
+<div class="form-group">
+<button class="primary-btn">Ajouter une Tâche</button>
+</div>
+</a>
+<table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">type</th>
+            <th scope="col">description</th>
+            <th scope="col">technologie</th>
+            <th scope="col">coût</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+          {% for tache in taches %}
+            <tr> 
+                <th>{{tache.id}}</th>
+                <th>{{tache.type}}</th>
+                <th>{{tache.description}}</th>
+                <th>{{tache.technologie}}</th>
+                <th>{{tache.cout}}</th>
+                <th>
+                 <a href="{{path('details',{'id':tache.id})}}">
+                        <button type="button" class="btn btn-primary">plus de détails</button>
+                    </a>
+                    <a href="{{path('modification',{'id':tache.id})}}">
+                        <button type="button" class="btn btn-warning">Modification</button>
+                    </a>
+                    <a href="{{path('tache-delete',{'id':tache.id})}}">
+                        <button type="button" class="btn btn-danger">Supprimer</button>
+                    </a>
+                </th>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+{% endblock %}

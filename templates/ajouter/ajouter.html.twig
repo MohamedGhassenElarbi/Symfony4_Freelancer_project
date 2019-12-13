@@ -1,0 +1,45 @@
+{% extends 'base2.html.twig'%}
+{% block body %}
+    <!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+			<div class="header-search">
+					</div>
+				<form id="checkout-form" class="clearfix" method="Post" action="{{ path('ajout') }}">
+					<div class="col-md-6">
+						<div class="billing-details">
+							<div class="section-title">
+								<h3 class="title">Ajouter une Tâche</h3>
+                            </div>
+							<div class="form-group">
+								<input class="input" type="text" name="type" placeholder="Type" value= >
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="description" placeholder="description"value=>
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="image" placeholder="image"value=>
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="technologie" placeholder="technologie"value=>
+							</div>
+							<div class="form-group">
+								<input class="input" type="text" name="cout" placeholder="côut"value=>
+							</div>
+							<div class="form-group">
+							<button type="submit" class="primary-btn">Ajouter la Tâche</button>
+							</div>
+						</div>
+					</div>
+					</div>
+				</form>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+{% endblock %}

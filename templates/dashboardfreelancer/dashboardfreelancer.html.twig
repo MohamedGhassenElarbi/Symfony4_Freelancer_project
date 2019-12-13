@@ -1,0 +1,45 @@
+{% extends 'base2.html.twig'%}
+{% block body %}
+<div>
+<a href="{{path('aff_ajout_fr')}}">
+<div class="form-group">
+<button class="primary-btn">Ajouter un Freelancer</button>
+</div>
+</a>
+<table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">nom</th>
+            <th scope="col">prenom</th>
+            <th scope="col">domaine</th>
+            <th scope="col">email</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+          {% for freelancer in freelancers %}
+            <tr> 
+                <th>{{freelancer.id}}</th>
+                <th>{{freelancer.nom}}</th>
+                <th>{{freelancer.prenom}}</th>
+                <th>{{freelancer.domaine}}</th>
+                <th>{{freelancer.email}}</th>
+                <th>
+                 <a href="{{path('details_free',{'id':freelancer.id})}}">
+                        <button type="button" class="btn btn-primary">plus de détails</button>
+                    </a>
+                    <a href="{{path('affmodificationfreelancer',{'id':freelancer.id})}}">
+                        <button type="button" class="btn btn-warning">Modification</button>
+                    </a>
+                    <a href="{{path('freelancerdelete',{'id':freelancer.id})}}">
+                        <button type="button" class="btn btn-danger">Supprimer</button>
+                    </a>
+                </th>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base2.html.twig'%}
+{% block body %}
+    <!-- section -->
+	<p>&nbsp;</p>
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!--  Product Details -->
+				<div class="product product-details clearfix">
+					<div class="col-md-6">
+						<div id="product-main-view">
+							<div class="product-view">
+								<img src={{identifiant.image}} alt="">
+							</div>
+							
+						</div>
+					
+					</div>
+					<div class="col-md-6">
+						<div class="product-body">
+							<h2 class="product-name">Tâche ID:{{identifiant.id}}</h2>
+							<h3 class="product-price">Prix:{{identifiant.cout}}$</h3>
+							<p><strong>Type:</strong> {{identifiant.type}}</p>
+                            <p><strong>Technologie Demandée:</strong> {{identifiant.technologie}}</p>
+							<p><strong>Description:</strong>{{identifiant.description}}</p>
+							
+
+							<div class="product-btns">
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Reserver cette tâche</button>
+							</div>
+						</div>
+					</div>
+					
+
+				</div>
+				<!-- /Product Details -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+{% endblock %}

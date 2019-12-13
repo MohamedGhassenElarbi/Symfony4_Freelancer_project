@@ -1,0 +1,22 @@
+{% extends 'base.html.twig'%}
+{% block body %}
+<div class="col-md-6 login-form-2">
+<form method="Post" action="{{path('login')}}">
+                    
+                    <h3>Login </h3>
+                        <div class="form-group">
+                            <input type="text" name="_username"class="form-control" placeholder="Votre Identifiant *"  />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="_password"class="form-control" placeholder="Votre Mot de passe *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                        <div class="form-group">
+
+                            <a href="{{path('aff_register')}}" class="btnForgetPwd" value="Login">Inscription</a>
+                        </div>
+                    </form>
+                </div>
+{% endblock %}
